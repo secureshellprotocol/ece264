@@ -119,10 +119,10 @@ int readInput(vector<Foobar*> *line, string file){
 		if(type == "foobar"){
 			line->push_back(new Foobar(name));
 		}
-		if(type == "foo"){
+		else if(type == "foo"){
 			line->push_back(new Foo(name));
 		}
-		if(type == "bar"){
+		else if(type == "bar"){
 			line->push_back(new Bar(name));
 		}
 	}
