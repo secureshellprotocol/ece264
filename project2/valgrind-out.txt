@@ -1,0 +1,244 @@
+==150290== Memcheck, a memory error detector
+==150290== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==150290== Using Valgrind-3.19.0-8d3c8034b8-20220411 and LibVEX; rerun with -h for copyright info
+==150290== Command: ./a.out
+==150290== Parent PID: 24011
+==150290== 
+--150290-- 
+--150290-- Valgrind options:
+--150290--    --leak-check=full
+--150290--    --show-leak-kinds=all
+--150290--    --track-origins=yes
+--150290--    --verbose
+--150290--    --log-file=valgrind-out.txt
+--150290-- Contents of /proc/version:
+--150290--   Linux version 6.2.8-100.fc36.x86_64 (mockbuild@bkernel01.iad2.fedoraproject.org) (gcc (GCC) 12.2.1 20221121 (Red Hat 12.2.1-4), GNU ld version 2.37-37.fc36) #1 SMP PREEMPT_DYNAMIC Wed Mar 22 19:14:19 UTC 2023
+--150290-- 
+--150290-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand-rdseed
+--150290-- Page sizes: currently 4096, max supported 4096
+--150290-- Valgrind library directory: /usr/libexec/valgrind
+--150290-- Reading syms from /home/hotfudge/Cooper/ECE264/project2/a.out
+--150290-- Reading syms from /usr/lib64/ld-linux-x86-64.so.2
+--150290-- Warning: cross-CU LIMITATION: some inlined fn names
+--150290-- might be shown as UnknownInlinedFun
+--150290-- Reading syms from /usr/libexec/valgrind/memcheck-amd64-linux
+==150290== Downloading debug info for /usr/libexec/valgrind/memcheck-amd64-linux...
+--150290--   Considering /home/hotfudge/.cache/debuginfod_client/8c26ba98c25f5c0f87de693f85f7303389cec56c/debuginfo ..
+--150290--   .. CRC is valid
+==150290== Successfully downloaded debug file for /usr/libexec/valgrind/memcheck-amd64-linux
+==150290== Downloading debug info for /home/hotfudge/.cache/debuginfod_client/8c26ba98c25f5c0f87de693f85f7303389cec56c/debuginfo...
+--150290--   Considering /home/hotfudge/.cache/debuginfod_client/001b954d73e999b711d054446cc92d327a0df530/debuginfo ..
+--150290--   .. build-id is valid
+==150290== Successfully downloaded debug file for /home/hotfudge/.cache/debuginfod_client/8c26ba98c25f5c0f87de693f85f7303389cec56c/debuginfo
+--150290--    object doesn't have a dynamic symbol table
+--150290-- Scheduler: using generic scheduler lock implementation.
+--150290-- Reading suppressions file: /usr/libexec/valgrind/default.supp
+==150290== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-150290-by-hotfudge-on-stinkpad
+==150290== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-150290-by-hotfudge-on-stinkpad
+==150290== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-150290-by-hotfudge-on-stinkpad
+==150290== 
+==150290== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==150290== don't want to do, unless you know exactly what you're doing,
+==150290== or are doing some strange experiment):
+==150290==   /usr/libexec/valgrind/../../bin/vgdb --pid=150290 ...command...
+==150290== 
+==150290== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==150290==   /path/to/gdb ./a.out
+==150290== and then give GDB the following command
+==150290==   target remote | /usr/libexec/valgrind/../../bin/vgdb --pid=150290
+==150290== --pid is optional if only one valgrind process is running
+==150290== 
+--150290-- REDIR: 0x4026e60 (ld-linux-x86-64.so.2:strlen) redirected to 0x580bd382 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--150290-- REDIR: 0x4025670 (ld-linux-x86-64.so.2:index) redirected to 0x580bd39c (vgPlain_amd64_linux_REDIR_FOR_index)
+--150290-- Reading syms from /usr/libexec/valgrind/vgpreload_core-amd64-linux.so
+--150290-- Reading syms from /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+==150290== WARNING: new redirection conflicts with existing -- ignoring it
+--150290--     old: 0x04026e60 (strlen              ) R-> (0000.0) 0x580bd382 vgPlain_amd64_linux_REDIR_FOR_strlen
+--150290--     new: 0x04026e60 (strlen              ) R-> (2007.0) 0x0484b710 strlen
+--150290-- REDIR: 0x40258a0 (ld-linux-x86-64.so.2:strcmp) redirected to 0x484c6f0 (strcmp)
+--150290-- REDIR: 0x4025090 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x48501c0 (mempcpy)
+--150290-- Reading syms from /usr/lib64/libstdc++.so.6.0.30
+==150290== Downloading debug info for /usr/lib64/libstdc++.so.6.0.30...
+--150290--   Considering /home/hotfudge/.cache/debuginfod_client/6ce2a41dee893f9ede3c63f9aadad3826220476e/debuginfo ..
+--150290--   .. CRC is valid
+==150290== Successfully downloaded debug file for /usr/lib64/libstdc++.so.6.0.30
+==150290== Downloading debug info for /home/hotfudge/.cache/debuginfod_client/6ce2a41dee893f9ede3c63f9aadad3826220476e/debuginfo...
+--150290--   Considering /home/hotfudge/.cache/debuginfod_client/ed8afa2b2e7da61a9d9830f07ef85421ae504067/debuginfo ..
+--150290--   .. build-id is valid
+==150290== Successfully downloaded debug file for /home/hotfudge/.cache/debuginfod_client/6ce2a41dee893f9ede3c63f9aadad3826220476e/debuginfo
+--150290-- Reading syms from /usr/lib64/libm.so.6
+--150290--   Considering /usr/lib/debug/.build-id/7c/51a65c054f2ddc34c8325d82a1150f580f0d91.debug ..
+--150290--   .. build-id is valid
+--150290-- Reading syms from /usr/lib64/libgcc_s-12-20221121.so.1
+==150290== Downloading debug info for /usr/lib64/libgcc_s-12-20221121.so.1...
+--150290--   Considering /home/hotfudge/.cache/debuginfod_client/cbcf5689acb247f987a22375c392c19a530a85c0/debuginfo ..
+--150290--   .. CRC is valid
+==150290== Successfully downloaded debug file for /usr/lib64/libgcc_s-12-20221121.so.1
+==150290== Downloading debug info for /home/hotfudge/.cache/debuginfod_client/cbcf5689acb247f987a22375c392c19a530a85c0/debuginfo...
+--150290--   Considering /home/hotfudge/.cache/debuginfod_client/ed8afa2b2e7da61a9d9830f07ef85421ae504067/debuginfo ..
+--150290--   .. build-id is valid
+==150290== Successfully downloaded debug file for /home/hotfudge/.cache/debuginfod_client/cbcf5689acb247f987a22375c392c19a530a85c0/debuginfo
+--150290-- Reading syms from /usr/lib64/libc.so.6
+--150290--   Considering /usr/lib/debug/.build-id/82/57ee907646e9b057197533d1e4ac8ede7a9c5c.debug ..
+--150290--   .. build-id is valid
+==150290== WARNING: new redirection conflicts with existing -- ignoring it
+--150290--     old: 0x04c4e7f0 (memalign            ) R-> (1011.0) 0x0484a9e4 memalign
+--150290--     new: 0x04c4e7f0 (memalign            ) R-> (1017.0) 0x0484a9b7 aligned_alloc
+==150290== WARNING: new redirection conflicts with existing -- ignoring it
+--150290--     old: 0x04c4e7f0 (memalign            ) R-> (1011.0) 0x0484a9e4 memalign
+--150290--     new: 0x04c4e7f0 (memalign            ) R-> (1017.0) 0x0484a98a aligned_alloc
+==150290== WARNING: new redirection conflicts with existing -- ignoring it
+--150290--     old: 0x04c4e7f0 (memalign            ) R-> (1011.0) 0x0484a9e4 memalign
+--150290--     new: 0x04c4e7f0 (memalign            ) R-> (1017.0) 0x0484a9b7 aligned_alloc
+==150290== WARNING: new redirection conflicts with existing -- ignoring it
+--150290--     old: 0x04c4e7f0 (memalign            ) R-> (1011.0) 0x0484a9e4 memalign
+--150290--     new: 0x04c4e7f0 (memalign            ) R-> (1017.0) 0x0484a98a aligned_alloc
+--150290-- REDIR: 0x4c506d0 (libc.so.6:strnlen) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c509b0 (libc.so.6:strpbrk) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c50270 (libc.so.6:strcmp) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c6c730 (libc.so.6:wcsnlen) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c51660 (libc.so.6:memset) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c6af80 (libc.so.6:wcslen) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c51d00 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c6ad90 (libc.so.6:wcschr) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c501f0 (libc.so.6:index) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c50920 (libc.so.6:rindex) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c6ae20 (libc.so.6:wcscmp) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c51990 (libc.so.6:stpncpy) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c6b3d0 (libc.so.6:wmemchr) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c507f0 (libc.so.6:strncmp) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c51a20 (libc.so.6:strcasecmp) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c503c0 (libc.so.6:strcspn) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c6aeb0 (libc.so.6:wcscpy) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c50160 (libc.so.6:strcat) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c51c00 (libc.so.6:strncasecmp_l) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c51410 (libc.so.6:bcmp) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c57720 (libc.so.6:memrchr) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c52fb0 (libc.so.6:strchrnul) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c50330 (libc.so.6:strcpy) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c51b60 (libc.so.6:strcasecmp_l) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c50640 (libc.so.6:strlen) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c50890 (libc.so.6:strncpy) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c51900 (libc.so.6:stpcpy) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c51530 (libc.so.6:memmove) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+==150290== Preferring higher priority redirection:
+--150290--     old: 0x04d090c0 (__memcpy_avx_unalign) R-> (2018.0) 0x0484d9f0 __memcpy_avx_unaligned_erms
+--150290--     new: 0x04d090c0 (__memcpy_avx_unalign) R-> (2018.1) 0x0484f2c0 memmove
+--150290-- REDIR: 0x4c51380 (libc.so.6:memchr) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c50ad0 (libc.so.6:strspn) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c51760 (libc.so.6:mempcpy) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c51ac0 (libc.so.6:strncasecmp) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c52f20 (libc.so.6:rawmemchr) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4c51270 (libc.so.6:strstr) redirected to 0x483a1ea (_vgnU_ifunc_wrapper)
+--150290-- REDIR: 0x4d0f1b0 (libc.so.6:__strrchr_avx2) redirected to 0x484b0f0 (rindex)
+--150290-- REDIR: 0x4c4db00 (libc.so.6:malloc) redirected to 0x48457f9 (malloc)
+--150290-- REDIR: 0x4d0c860 (libc.so.6:__strlen_avx2) redirected to 0x484b5f0 (strlen)
+--150290-- REDIR: 0x4d08960 (libc.so.6:__memcmp_avx2_movbe) redirected to 0x484ea70 (bcmp)
+--150290-- REDIR: 0x4d0bf70 (libc.so.6:__strcmp_avx2) redirected to 0x484c5f0 (strcmp)
+--150290-- REDIR: 0x4d09080 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x484fdc0 (mempcpy)
+--150290-- REDIR: 0x4d090c0 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x484f2c0 (memmove)
+--150290-- REDIR: 0x4c50f80 (libc.so.6:__GI_strstr) redirected to 0x4850450 (__strstr_sse2)
+--150290-- REDIR: 0x492db80 (libstdc++.so.6:operator new[](unsigned long)) redirected to 0x48471bd (operator new[](unsigned long))
+--150290-- REDIR: 0x4d086c0 (libc.so.6:__memchr_avx2) redirected to 0x484c770 (memchr)
+--150290-- REDIR: 0x492db20 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x4845f83 (operator new(unsigned long))
+--150290-- REDIR: 0x492be70 (libstdc++.so.6:operator delete(void*)) redirected to 0x48485f7 (operator delete(void*))
+--150290-- REDIR: 0x492be80 (libstdc++.so.6:operator delete(void*, unsigned long)) redirected to 0x484886b (operator delete(void*, unsigned long))
+==150290== Conditional jump or move depends on uninitialised value(s)
+==150290==    at 0x40640A: SimpleList<int>::prepend(int) (main.cpp:59)
+==150290==    by 0x405EC3: Stack<int>::push(int) (main.cpp:154)
+==150290==    by 0x40291B: parseAndWrite(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:280)
+==150290==    by 0x4031C1: main (main.cpp:391)
+==150290==  Uninitialised value was created by a heap allocation
+==150290==    at 0x4845FF5: operator new(unsigned long) (vg_replace_malloc.c:422)
+==150290==    by 0x40654A: SimpleList<int>::emptyCase(int) (main.cpp:50)
+==150290==    by 0x40641C: SimpleList<int>::prepend(int) (main.cpp:60)
+==150290==    by 0x405EC3: Stack<int>::push(int) (main.cpp:154)
+==150290==    by 0x40291B: parseAndWrite(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:280)
+==150290==    by 0x4031C1: main (main.cpp:391)
+==150290== 
+--150290-- REDIR: 0x4d0bd80 (libc.so.6:__strchrnul_avx2) redirected to 0x484fcb0 (strchrnul)
+--150290-- REDIR: 0x492bea0 (libstdc++.so.6:operator delete[](void*)) redirected to 0x48495e9 (operator delete[](void*))
+--150290-- REDIR: 0x4c4e0c0 (libc.so.6:free) redirected to 0x4848072 (free)
+==150290== 
+==150290== HEAP SUMMARY:
+==150290==     in use at exit: 496 bytes in 10 blocks
+==150290==   total heap usage: 54 allocs, 44 frees, 93,428 bytes allocated
+==150290== 
+==150290== Searching for pointers to 10 not-freed blocks
+==150290== Checked 122,320 bytes
+==150290== 
+==150290== 16 bytes in 1 blocks are indirectly lost in loss record 1 of 8
+==150290==    at 0x4845FF5: operator new(unsigned long) (vg_replace_malloc.c:422)
+==150290==    by 0x4064F0: SimpleList<double>::emptyCase(double) (main.cpp:50)
+==150290==    by 0x4062A2: SimpleList<double>::prepend(double) (main.cpp:60)
+==150290==    by 0x405E2F: Stack<double>::push(double) (main.cpp:154)
+==150290==    by 0x4029BC: parseAndWrite(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:292)
+==150290==    by 0x4031C1: main (main.cpp:391)
+==150290== 
+==150290== 32 bytes in 2 blocks are indirectly lost in loss record 2 of 8
+==150290==    at 0x4845FF5: operator new(unsigned long) (vg_replace_malloc.c:422)
+==150290==    by 0x406328: SimpleList<int>::append(int) (main.cpp:82)
+==150290==    by 0x405E79: Queue<int>::push(int) (main.cpp:137)
+==150290==    by 0x40291B: parseAndWrite(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:280)
+==150290==    by 0x4031C1: main (main.cpp:391)
+==150290== 
+==150290== 64 bytes in 1 blocks are definitely lost in loss record 3 of 8
+==150290==    at 0x4845FF5: operator new(unsigned long) (vg_replace_malloc.c:422)
+==150290==    by 0x403B23: int create<int>(std::__cxx11::list<SimpleList<int>*, std::allocator<SimpleList<int>*> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:189)
+==150290==    by 0x4026CE: parseAndWrite(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:248)
+==150290==    by 0x4031C1: main (main.cpp:391)
+==150290== 
+==150290== 64 bytes in 1 blocks are definitely lost in loss record 4 of 8
+==150290==    at 0x4845FF5: operator new(unsigned long) (vg_replace_malloc.c:422)
+==150290==    by 0x403EB9: int create<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::__cxx11::list<SimpleList<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, std::allocator<SimpleList<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:189)
+==150290==    by 0x4027FA: parseAndWrite(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:262)
+==150290==    by 0x4031C1: main (main.cpp:391)
+==150290== 
+==150290== 64 bytes in 1 blocks are definitely lost in loss record 5 of 8
+==150290==    at 0x4845FF5: operator new(unsigned long) (vg_replace_malloc.c:422)
+==150290==    by 0x403D3B: int create<double>(std::__cxx11::list<SimpleList<double>*, std::allocator<SimpleList<double>*> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:192)
+==150290==    by 0x402764: parseAndWrite(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:255)
+==150290==    by 0x4031C1: main (main.cpp:391)
+==150290== 
+==150290== 64 bytes in 1 blocks are definitely lost in loss record 6 of 8
+==150290==    at 0x4845FF5: operator new(unsigned long) (vg_replace_malloc.c:422)
+==150290==    by 0x403F06: int create<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::__cxx11::list<SimpleList<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*, std::allocator<SimpleList<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:192)
+==150290==    by 0x4027FA: parseAndWrite(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:262)
+==150290==    by 0x4031C1: main (main.cpp:391)
+==150290== 
+==150290== 96 (64 direct, 32 indirect) bytes in 1 blocks are definitely lost in loss record 7 of 8
+==150290==    at 0x4845FF5: operator new(unsigned long) (vg_replace_malloc.c:422)
+==150290==    by 0x403B70: int create<int>(std::__cxx11::list<SimpleList<int>*, std::allocator<SimpleList<int>*> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:192)
+==150290==    by 0x4026CE: parseAndWrite(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:248)
+==150290==    by 0x4031C1: main (main.cpp:391)
+==150290== 
+==150290== 144 (128 direct, 16 indirect) bytes in 2 blocks are definitely lost in loss record 8 of 8
+==150290==    at 0x4845FF5: operator new(unsigned long) (vg_replace_malloc.c:422)
+==150290==    by 0x403CEE: int create<double>(std::__cxx11::list<SimpleList<double>*, std::allocator<SimpleList<double>*> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:189)
+==150290==    by 0x402764: parseAndWrite(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:255)
+==150290==    by 0x4031C1: main (main.cpp:391)
+==150290== 
+==150290== LEAK SUMMARY:
+==150290==    definitely lost: 448 bytes in 7 blocks
+==150290==    indirectly lost: 48 bytes in 3 blocks
+==150290==      possibly lost: 0 bytes in 0 blocks
+==150290==    still reachable: 0 bytes in 0 blocks
+==150290==         suppressed: 0 bytes in 0 blocks
+==150290== 
+==150290== ERROR SUMMARY: 7 errors from 7 contexts (suppressed: 0 from 0)
+==150290== 
+==150290== 1 errors in context 1 of 7:
+==150290== Conditional jump or move depends on uninitialised value(s)
+==150290==    at 0x40640A: SimpleList<int>::prepend(int) (main.cpp:59)
+==150290==    by 0x405EC3: Stack<int>::push(int) (main.cpp:154)
+==150290==    by 0x40291B: parseAndWrite(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:280)
+==150290==    by 0x4031C1: main (main.cpp:391)
+==150290==  Uninitialised value was created by a heap allocation
+==150290==    at 0x4845FF5: operator new(unsigned long) (vg_replace_malloc.c:422)
+==150290==    by 0x40654A: SimpleList<int>::emptyCase(int) (main.cpp:50)
+==150290==    by 0x40641C: SimpleList<int>::prepend(int) (main.cpp:60)
+==150290==    by 0x405EC3: Stack<int>::push(int) (main.cpp:154)
+==150290==    by 0x40291B: parseAndWrite(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (main.cpp:280)
+==150290==    by 0x4031C1: main (main.cpp:391)
+==150290== 
+==150290== ERROR SUMMARY: 7 errors from 7 contexts (suppressed: 0 from 0)
